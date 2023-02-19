@@ -27,11 +27,11 @@ private ActivityFunctionBinding binding;
     public void onClick(View v) {
         switch (v.getId())
         {
-            case R.id.TrackExpensesBtn:
+            case R.id.trackExpensesBtn:
                 Intent intent = new Intent(FunctionActivity.this, GalleryFragment.class);
                 startActivity(intent);
                 break;
-            case R.id.DiaryBtn:
+            case R.id.diaryBtn:
                 Intent intent1 = new Intent(FunctionActivity.this, SlideshowFragment.class);
                 startActivity(intent1);
                 break;

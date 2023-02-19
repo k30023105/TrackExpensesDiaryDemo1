@@ -12,10 +12,10 @@
         android:theme="@style/Theme.TrackExpensesDiaryDemo"
         tools:targetApi="31">
         <activity
-            android:name=".ReigisterActivity"
+            android:name=".ui.ReigisterActivity"
             android:exported="false" />
         <activity
-            android:name=".FunctionActivity"
+            android:name=".ui.FunctionActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

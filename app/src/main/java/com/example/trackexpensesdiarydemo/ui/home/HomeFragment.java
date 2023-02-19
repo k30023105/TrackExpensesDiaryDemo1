@@ -29,6 +29,7 @@ public class HomeFragment extends Fragment {
     private SharedPreferences loginPreference;
     private String useremail;
     private String password;
+
     private Boolean all = false;
     private Boolean every = false;
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -38,7 +39,7 @@ public class HomeFragment extends Fragment {
         View root = binding.getRoot();
         HomeViewModel homeViewModel =
                 new ViewModelProvider(this).get(HomeViewModel.class);
-        loginPreference = this.getSharedPreferences("userInfo", MODE_PRIVATE);
+        loginPreference = getActivity().getSharedPreferences("userInfo", MODE_PRIVATE);
         all = binding.AllRememberCheck.isChecked();
         every = binding.EveryRememberCheck.isChecked();
         binding.AllRememberCheck.setChecked(true);
@@ -79,8 +80,8 @@ public class HomeFragment extends Fragment {
                                 "\n" + "是否自動登入:" + every);
                         editor.commit();
                     }
-                    Intent intent = new Intent(getActivity(),FunctionActivity.class);
-                    startActivity(intent);
+                    Intent start = new Intent(getActivity(),FunctionActivity.class);
+                    startActivity(start);
                 }
                 else
                 {
@@ -88,29 +89,22 @@ public class HomeFragment extends Fragment {
                 }
             }
         });
+
         binding.ReigisterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), ReigisterActivity.class);
-                startActivity(intent);
+                Intent register = new Intent(getActivity(),ReigisterActivity.class);
+                startActivity(register);
             }
         });
         binding.StartBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),FunctionActivity.class);
-                startActivity(intent);
+                Intent start = new Intent(getActivity(),FunctionActivity.class);
+                startActivity(start);
             }
         });
         return root;
-    }
-
-    private Map<String, Object> readLogin() {
-        return null;
-    }
-
-    private SharedPreferences getSharedPreferences(String login, int modePrivate) {
-        return null;
     }
 
     public void onDestroyView () {

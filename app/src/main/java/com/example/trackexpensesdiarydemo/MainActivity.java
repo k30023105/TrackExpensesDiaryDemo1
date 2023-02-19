@@ -17,9 +17,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.trackexpensesdiarydemo.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
-
-    private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
+    private AppBarConfiguration mAppBarConfiguration;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
