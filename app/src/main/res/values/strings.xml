@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">記帳日記</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">使用者暱稱</string>
+    <string name="nav_header_subtitle">使用者信箱</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">主頁</string>
+    <string name="menu_gallery">記帳</string>
+    <string name="menu_slideshow">日記</string>
+    <string name="LoginBtn">登入</string>
+    <string name="ReigisterBtn">註冊</string>
+    <string name="StartBtn">直接開始</string>
+
+</resources>
