@@ -12,14 +12,25 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.trackexpensesdiarydemo.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_trackexpenses"
+        android:name="com.example.trackexpensesdiarydemo.ui.trackexpenses.TrackExpensesFragment"
+        android:label="@string/menu_trackexpenses"
+        tools:layout="@layout/fragment_trackexpenses" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.trackexpensesdiarydemo.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_diary"
+        android:name="com.example.trackexpensesdiarydemo.ui.diary.DiaryFragment"
+        android:label="@string/menu_diary"
+        tools:layout="@layout/fragment_diary" />
+    <fragment
+        android:id="@+id/nav_uniform_invoice_lottery"
+        android:name="com.example.trackexpensesdiarydemo.ui.uniforminvoicelottery.UniformInvoiceLotteryFragment"
+        android:label="@string/menu_uniforminvoicelottery"
+        tools:layout="@layout/fragment_uniform_invoice_lottery" />
+    <fragment
+        android:id="@+id/nav_member"
+        android:name="com.example.trackexpensesdiarydemo.ui.member.MemberFragment"
+        android:label="@string/menu_member"
+        tools:layout="@layout/fragment_member" />
+
 </navigation>

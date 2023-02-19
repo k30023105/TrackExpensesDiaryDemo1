@@ -5,13 +5,22 @@
     <string name="nav_header_title">使用者暱稱</string>
     <string name="nav_header_subtitle">使用者信箱</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">登出</string>
 
     <string name="menu_home">主頁</string>
-    <string name="menu_gallery">記帳</string>
-    <string name="menu_slideshow">日記</string>
+    <string name="menu_trackexpenses">我的記帳</string>
+    <string name="menu_diary">我的日記</string>
+    <string name="menu_uniforminvoicelottery">發票兌獎</string>
+    <string name="menu_member">修改會員資料</string>
+    <string name="AllRememberCheck">記住我們</string>
+    <string name="EveryRememberCheck">自動登入</string>
     <string name="LoginBtn">登入</string>
     <string name="ReigisterBtn">註冊</string>
     <string name="StartBtn">直接開始</string>
+    <string name="ragister_name">註冊</string>
+    <string name="OKBtn">提交資料</string>
+    <string name="trackExpensesBtn">打開帳本</string>
+    <string name="diaryBtn">打開日記本</string>
+
 
 </resources>

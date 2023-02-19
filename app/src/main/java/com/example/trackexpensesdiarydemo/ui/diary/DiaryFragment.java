@@ -1,4 +1,4 @@
-package com.example.trackexpensesdiarydemo.ui.slideshow;
+package com.example.trackexpensesdiarydemo.ui.diary;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,14 +12,14 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.trackexpensesdiarydemo.databinding.FragmentSlideshowBinding;
 
-public class SlideshowFragment extends Fragment {
+public class DiaryFragment extends Fragment {
 
     private FragmentSlideshowBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        SlideshowViewModel slideshowViewModel =
-                new ViewModelProvider(this).get(SlideshowViewModel.class);
+        DiaryViewModel slideshowViewModel =
+                new ViewModelProvider(this).get(DiaryViewModel.class);
 
         binding = FragmentSlideshowBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
