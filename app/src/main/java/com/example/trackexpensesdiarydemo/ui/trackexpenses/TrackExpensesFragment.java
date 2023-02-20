@@ -188,6 +188,7 @@ public class TrackExpensesFragment extends Fragment {
                 binding.calculatorNuberView.setText(show_equation);
             }
         });
+        return root;
     }
 
     protected boolean operatorPriorityCompare(char operator1, char operator2) {
@@ -320,7 +321,7 @@ public class TrackExpensesFragment extends Fragment {
         return operand.get(0).toString();
     }
 
-    @Override
+   /* @Override
     public void onClick(View v) {
         binding.saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -328,7 +329,7 @@ public class TrackExpensesFragment extends Fragment {
 
             }
         });
-    }
+    }*/
     @Override
     public void onDestroyView() {
         super.onDestroyView();

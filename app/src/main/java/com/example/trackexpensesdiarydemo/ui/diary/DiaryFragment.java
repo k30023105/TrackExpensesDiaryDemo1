@@ -10,18 +10,18 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.trackexpensesdiarydemo.databinding.FragmentSlideshowBinding;
+import com.example.trackexpensesdiarydemo.databinding.FragmentDiaryBinding;
 
 public class DiaryFragment extends Fragment {
 
-    private FragmentSlideshowBinding binding;
+    private FragmentDiaryBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         DiaryViewModel slideshowViewModel =
                 new ViewModelProvider(this).get(DiaryViewModel.class);
 
-        binding = FragmentSlideshowBinding.inflate(inflater, container, false);
+        binding = FragmentDiaryBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final TextView textView = binding.textSlideshow;
