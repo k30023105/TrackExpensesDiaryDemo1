@@ -3,6 +3,8 @@ package com.example.trackexpensesdiarydemo;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -39,8 +41,16 @@ public class MainActivity extends AppCompatActivity {
         binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                try {
+                    Uri uri = Uri.parse("mailto:k30023105@gmail.com");
+                    Intent intent = new Intent(Intent.ACTION_SENDTO,uri);
+                    PackageInfo packageInfo = getPackageManager().getPackageInfo(getPackageName(),0);
+                    String subject = getString(R.string.app_name) + "(" +packageInfo.versionName + ")";
+                    intent.putExtra(Intent.EXTRA_SUBJECT,subject);
+                    startActivity(intent);
+                }catch (Exception e){
+                    Toast.makeText(MainActivity.this, "沒有可撰寫郵件的APP", Toast.LENGTH_SHORT).show();
+                }
             }
         });
         DrawerLayout drawer = binding.drawerLayout;
@@ -81,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         memberDataPre = getSharedPreferences("memberDataPre",MODE_PRIVATE);
                         SharedPreferences.Editor editor = memberDataPre.edit();
-                        editor.remove("usernickname");
+                        editor.remove("nickname");
                         editor.remove("useremail");
                         editor.apply();
                         Intent intent = new Intent(MainActivity.this,HomeFragment.class);

@@ -16,6 +16,8 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.trackexpensesdiarydemo.dao.UserDao;
+
 import com.example.trackexpensesdiarydemo.R;
 import com.example.trackexpensesdiarydemo.databinding.FragmentHomeBinding;
 import com.example.trackexpensesdiarydemo.ui.FunctionActivity;
@@ -58,6 +60,7 @@ public class HomeFragment extends Fragment {
                 Log.e("自動登入","自動登入");
             }
         }
+
         binding.LoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
