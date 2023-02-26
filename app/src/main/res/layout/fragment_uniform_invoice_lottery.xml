@@ -6,49 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.uniforminvoicelottery.UniformInvoiceLotteryFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <com.google.android.material.bottomappbar.BottomAppBar
-            android:id="@+id/bottomAppBar2"
-            android:layout_width="409dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            app:backgroundTint="#8306DC"
-            tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="3dp" />
-
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/baseline_arrow_left_24"
-            tools:layout_editor_absoluteX="5dp"
-            tools:layout_editor_absoluteY="5dp" />
-
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/baseline_arrow_right_24"
-            tools:layout_editor_absoluteX="347dp"
-            tools:layout_editor_absoluteY="3dp" />
-
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="155dp"
-            android:layout_height="22dp"
-            android:text="TextView"
-            tools:layout_editor_absoluteX="128dp"
-            tools:layout_editor_absoluteY="16dp" />
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="336dp"
-            android:layout_height="536dp"
-            tools:layout_editor_absoluteX="37dp"
-            tools:layout_editor_absoluteY="113dp"
-            tools:src="@tools:sample/avatars" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="match_parent" />
 </FrameLayout>

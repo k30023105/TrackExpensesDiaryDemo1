@@ -14,28 +14,28 @@
         tools:layout_editor_absoluteY="1dp">
 
         <Button
-            android:id="@+id/calendarBtn3"
+            android:id="@+id/calendarBtn"
             android:layout_width="match_parent"
-            android:layout_height="66dp"
+            android:layout_height="73dp"
             android:layout_marginTop="36dp"
             android:layout_marginBottom="21dp"
-            android:text="Button"
+            android:text="@string/calendarBtn"
             app:layout_constraintBottom_toTopOf="@+id/imageView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/DiaryView"
             android:layout_width="match_parent"
-            android:layout_height="499dp"
+            android:layout_height="488dp"
             android:hint="這一天的紀錄..." />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/SaveBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/SaveBtn" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingActionButton"
