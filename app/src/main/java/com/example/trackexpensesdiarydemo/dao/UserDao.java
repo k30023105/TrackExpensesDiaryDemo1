@@ -71,7 +71,7 @@ public class UserDao {
                 String nicknamedb = rs.getString(1);
                 String useremaildb = rs.getString(2);
                 String passworddb = rs.getString(3);
-                user = new User(id,nicknamedb,useremail,passworddb);
+                user = new User(id,nicknamedb,useremaildb,passworddb);
             }
         }catch (SQLException throwables){
             throwables.printStackTrace();

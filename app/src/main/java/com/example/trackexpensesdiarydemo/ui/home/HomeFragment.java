@@ -64,35 +64,28 @@ public class HomeFragment extends Fragment {
         binding.LoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                useremail = binding.EmailText.getText().toString();
-                password = binding.PasswordText.getText().toString();
-                if(useremail.equals("k30023105@gmail.com") && password.equals("k300"))
-                {
-                    Toast.makeText(getActivity(), "登入成功", Toast.LENGTH_SHORT).show();
-                    if(binding.AllRememberCheck.isChecked())
-                    {
-                        SharedPreferences.Editor editor = loginPreference.edit();
-                        editor.putString("useremail",useremail);
-                        editor.putString("password",password);
-                        editor.putBoolean("all",all);
-                        editor.putBoolean("every",every);
-                        editor.commit();
-                        Log.e("選中儲存密碼","信箱:" + useremail +
-                                "\n" + "密碼:" + password +
-                                "\n" + "是否記住信箱及密碼:" + all +
-                                "\n" + "是否自動登入:" + every);
-                        editor.commit();
+                        if(binding.EmailText.equals(useremail) && binding.PasswordText.equals(password)){
+                            Toast.makeText(getActivity(), "登入成功", Toast.LENGTH_SHORT).show();
+                            if (binding.AllRememberCheck.isChecked()) {
+                                SharedPreferences.Editor editor = loginPreference.edit();
+                                editor.putString("useremail", useremail);
+                                editor.putString("password", password);
+                                editor.putBoolean("all", all);
+                                editor.putBoolean("every", every);
+                                editor.commit();
+                                Log.e("選中儲存密碼", "信箱:" + useremail +
+                                        "\n" + "密碼:" + password +
+                                        "\n" + "是否記住信箱及密碼:" + all +
+                                        "\n" + "是否自動登入:" + every);
+                                editor.commit();
+                            }
+                            Intent start = new Intent(getActivity(), FunctionActivity.class);
+                            startActivity(start);
+                        } else {
+                            Toast.makeText(getActivity(), "使用者信箱或密碼錯誤，請重新登入", Toast.LENGTH_LONG).show();
+                        }
                     }
-                    Intent start = new Intent(getActivity(),FunctionActivity.class);
-                    startActivity(start);
-                }
-                else
-                {
-                    Toast.makeText(getActivity(), "使用者信箱或密碼錯誤，請重新登入", Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-
+                });
         binding.ReigisterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -109,7 +102,6 @@ public class HomeFragment extends Fragment {
         });
         return root;
     }
-
     public void onDestroyView () {
         super.onDestroyView();
         binding = null;
