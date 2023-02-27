@@ -13,7 +13,7 @@
         android:layout_marginTop="114dp"
         android:text="@string/ragister_name"
         android:textAlignment="center"
-        android:textSize="34sp"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,6 +26,7 @@
         android:ems="10"
         android:hint="請輸入暱稱"
         android:inputType="textPersonName"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ragister_name" />
 
@@ -38,6 +39,7 @@
         android:ems="10"
         android:hint="請輸入電子信箱"
         android:inputType="textEmailAddress"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nickNameText" />
 
@@ -50,6 +52,7 @@
         android:ems="10"
         android:hint="請輸入密碼"
         android:inputType="textPassword"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EmailText" />
 
@@ -62,6 +65,7 @@
         android:ems="10"
         android:hint="請再次輸入密碼"
         android:inputType="textPassword"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordText" />
 
@@ -69,9 +73,11 @@
         android:id="@+id/OKBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="158dp"
-        android:layout_marginTop="43dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#D3467E"
         android:text="@string/OKBtn"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password2Text" />
 

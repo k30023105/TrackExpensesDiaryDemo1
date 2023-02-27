@@ -19,7 +19,9 @@
             android:layout_height="73dp"
             android:layout_marginTop="36dp"
             android:layout_marginBottom="21dp"
+            android:backgroundTint="#F1B3C2"
             android:text="@string/calendarBtn"
+            android:textSize="29sp"
             app:layout_constraintBottom_toTopOf="@+id/imageView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -28,20 +30,25 @@
         <TextView
             android:id="@+id/DiaryView"
             android:layout_width="match_parent"
-            android:layout_height="488dp"
-            android:hint="這一天的紀錄..." />
+            android:layout_height="490dp"
+            android:hint="這一天的紀錄..."
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/SaveBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/SaveBtn" />
+            android:backgroundTint="#F17693"
+            android:text="@string/SaveBtn"
+            android:textSize="20sp" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingActionButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
-            android:src="@drawable/baseline_image_24" />
+            android:src="@drawable/baseline_image_24"
+            app:backgroundTint="#ED9494" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

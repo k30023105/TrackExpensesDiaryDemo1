@@ -36,6 +36,7 @@
         android:layout_height="43dp"
         android:layout_marginStart="132dp"
         android:layout_marginTop="504dp"
+        android:backgroundTint="#B3AE8D"
         android:text="@string/LoginBtn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -46,6 +47,7 @@
         android:layout_height="43dp"
         android:layout_marginEnd="76dp"
         android:layout_marginBottom="124dp"
+        android:backgroundTint="#D3467E"
         android:text="@string/StartBtn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -56,6 +58,7 @@
         android:layout_height="40dp"
         android:layout_marginStart="84dp"
         android:layout_marginBottom="124dp"
+        android:backgroundTint="#D3467E"
         android:text="@string/ReigisterBtn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

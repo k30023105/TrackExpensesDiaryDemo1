@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,88 +11,114 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/NickNameText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            tools:layout_editor_absoluteX="89dp"
-            tools:layout_editor_absoluteY="174dp" />
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="168dp"
+            android:text="@string/NickNameText"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/EmailText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            tools:layout_editor_absoluteX="89dp"
-            tools:layout_editor_absoluteY="242dp" />
+            android:layout_marginStart="92dp"
+            android:layout_marginTop="236dp"
+            android:text="@string/EmailText"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/PasswordText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            tools:layout_editor_absoluteX="89dp"
-            tools:layout_editor_absoluteY="313dp" />
+            android:layout_marginStart="108dp"
+            android:layout_marginTop="296dp"
+            android:text="@string/PasswordText"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/MemberText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            tools:layout_editor_absoluteX="176dp"
-            tools:layout_editor_absoluteY="111dp" />
+            android:layout_marginStart="144dp"
+            android:layout_marginTop="72dp"
+            android:text="@string/MemberText"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/NickNameView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="168dp"
+            android:layout_marginTop="156dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name"
-            tools:layout_editor_absoluteX="185dp"
-            tools:layout_editor_absoluteY="161dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress"
+            android:id="@+id/EmailView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="168dp"
+            android:layout_marginTop="220dp"
             android:ems="10"
             android:inputType="textEmailAddress"
-            tools:layout_editor_absoluteX="184dp"
-            tools:layout_editor_absoluteY="223dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/PasswordView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="168dp"
+            android:layout_marginTop="284dp"
             android:ems="10"
             android:inputType="textPassword"
-            tools:layout_editor_absoluteX="184dp"
-            tools:layout_editor_absoluteY="294dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/SaveBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button"
-            tools:layout_editor_absoluteX="158dp"
-            tools:layout_editor_absoluteY="455dp" />
+            android:layout_marginStart="156dp"
+            android:layout_marginTop="444dp"
+            android:backgroundTint="#88976D"
+            android:text="@string/SaveBtn"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView10"
+            android:id="@+id/Password2Text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            tools:layout_editor_absoluteX="92dp"
-            tools:layout_editor_absoluteY="365dp" />
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="372dp"
+            android:text="@string/Password2Text"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editTextTextPassword2"
+            android:id="@+id/Password2View"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="168dp"
+            android:layout_marginTop="360dp"
             android:ems="10"
             android:inputType="textPassword"
-            tools:layout_editor_absoluteX="185dp"
-            tools:layout_editor_absoluteY="354dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

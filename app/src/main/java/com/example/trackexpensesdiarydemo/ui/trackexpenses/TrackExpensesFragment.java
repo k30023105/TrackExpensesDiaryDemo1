@@ -1,6 +1,8 @@
 package com.example.trackexpensesdiarydemo.ui.trackexpenses;
 
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,6 +33,23 @@ public class TrackExpensesFragment extends Fragment {
         super.onCreate(savedInstanceState);
         binding = FragmentTrackexpensesBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+        binding.CountBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new AlertDialog.Builder(getActivity()).setTitle("回報計算結果").setMessage("本次記帳結果為:" + binding.historyNumberView.getText() + "+" + binding.incomeNumberVIew.getText() + "-" + binding.costNumberView.getText() + "=" + (binding.historyNumberView.getText() + "+" + binding.incomeNumberVIew.getText() + "-" + binding.costNumberView.getText())).setPositiveButton("儲存此結果", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                                                
+                    }
+                }).setNegativeButton("返回", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                }).show();
+            }
+        });
+
         binding.calendarBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -181,13 +200,6 @@ public class TrackExpensesFragment extends Fragment {
                 binding.calculatorNuberView.setText(show_equation);
             }
         });
-        binding.dividBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                show_equation.append("/");
-                binding.calculatorNuberView.setText(show_equation);
-            }
-        });
         return root;
     }
 
@@ -207,10 +219,6 @@ public class TrackExpensesFragment extends Fragment {
                 o1 = 1;
                 break;
             }
-            case '/': {
-                o1 = 1;
-                break;
-            }
         }
         switch (operator2) {
             case '+': {
@@ -222,10 +230,6 @@ public class TrackExpensesFragment extends Fragment {
                 break;
             }
             case '*': {
-                o2 = 1;
-                break;
-            }
-            case '/': {
                 o2 = 1;
                 break;
             }
@@ -269,11 +273,6 @@ public class TrackExpensesFragment extends Fragment {
                                 operand.add(String.valueOf(result));
                                 break;
                             }
-                            case '/': {
-                                result = temp2 / temp3;
-                                operand.add(String.valueOf(result));
-                                break;
-                            }
                         }
                         if (operator.size() > 0) {
                             temp5 = operator.get(operator.size() - 1).toString();
@@ -307,11 +306,6 @@ public class TrackExpensesFragment extends Fragment {
                             operand.add(String.valueOf(result));
                             break;
                         }
-                        case '/': {
-                            result = temp2 / temp3;
-                            operand.add(String.valueOf(result));
-                            break;
-                        }
                     }
                 }
             } else {
@@ -321,15 +315,6 @@ public class TrackExpensesFragment extends Fragment {
         return operand.get(0).toString();
     }
 
-   /* @Override
-    public void onClick(View v) {
-        binding.saveBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-    }*/
     @Override
     public void onDestroyView() {
         super.onDestroyView();

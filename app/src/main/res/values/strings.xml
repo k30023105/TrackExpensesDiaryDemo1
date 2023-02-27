@@ -20,6 +20,7 @@
     <string name="ragister_name">註冊</string>
     <string name="OKBtn">提交資料</string>
     <string name="trackExpensesBtn">打開帳本</string>
+    <string name="diaryBtn">打開日記本</string>
     <string name="calendarBtn">選擇日期</string>
     <string name="CBtn">清空</string>
     <string name="backSpaceBtn">倒退</string>
@@ -42,6 +43,11 @@
     <string name="costText">本次支出</string>
     <string name="CountBtn">計算</string>
     <string name="SaveBtn">儲存</string>
+    <string name="MemberText">會員資料</string>
+    <string name="NickNameText">暱稱:</string>
+    <string name="EmailText">E-mail:</string>
+    <string name="PasswordText">密碼:</string>
+    <string name="Password2Text">再次輸入密碼:</string>
 
 
 </resources>
