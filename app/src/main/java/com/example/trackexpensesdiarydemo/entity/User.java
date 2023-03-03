@@ -1,13 +1,13 @@
 package com.example.trackexpensesdiarydemo.entity;
 
 public class User {
+
     private int id;
     private String nickname;
     private String useremail;
     private String password;
 
     public User(){
-
     }
 
     public User(int id,String nickname,String useremail,String password){
@@ -24,8 +24,7 @@ public class User {
     public void setId(int id) {
         this.id = id;
     }
-
-    public String getNickname() {
+    public String getNickname(){
         return nickname;
     }
 
@@ -49,5 +48,3 @@ public class User {
         this.password = password;
     }
 }
-
-
