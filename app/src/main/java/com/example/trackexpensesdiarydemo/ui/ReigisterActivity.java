@@ -16,6 +16,7 @@ import com.example.trackexpensesdiarydemo.entity.User;
 
 import com.example.trackexpensesdiarydemo.databinding.ActivityReigisterBinding;
 import com.example.trackexpensesdiarydemo.ui.home.HomeFragment;
+import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
 public class ReigisterActivity extends AppCompatActivity {
     private ActivityReigisterBinding binding;
@@ -27,35 +28,26 @@ public class ReigisterActivity extends AppCompatActivity {
         binding.OKBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String cnickname = binding.nickNameText.getText().toString();
-                String cuseremail = binding.EmailText.getText().toString();
-                String cpassword = binding.passwordText.getText().toString();
-                String cpassword2 = binding.password2Text.getText().toString();
-                if (cnickname.length() < 1 || cuseremail.length() < 9 || cpassword.length() < 4 || cpassword2.length() < 4){
-                    Toast.makeText(ReigisterActivity.this,"請輸入正確的格式",Toast.LENGTH_LONG).show();
-                    return;
-                }
-                User user = new User();
-                user.setNickname(cnickname);
-                user.setUseremail(cuseremail);
-                user.setPassword(cpassword);
-
-                new Thread(){
+                Handler handler = new Handler();
+                handler.post(new Runnable() {
                     @Override
                     public void run() {
-                        int msg = 0;
-                        UserDao userDao = new UserDao();
-                        User uu = userDao.findUser(user.getUseremail());
-                        if (uu != null){
-                            msg = 1;
+                        String[] field = new String[3];
+                        field[0] = "username";
+                        field[1] = "useremail";
+                        field[2] = "password";
+                        String[] data = new String[3];
+                        data[0] = "username";
+                        data[1] = "useremail";
+                        data[2] = "password";
+                        PutData putData = new PutData("http://projects.vishnus.com/AdvancedHttpURLConnection/putData.php","POST",field,data);
+                        if (putData.startPut()){
+                            if (putData.onComplete()){
+                                String result = putData.getResult();
+                            }
                         }
-                        boolean flag = userDao.register(user);
-                        if (flag){
-                            msg = 2;
-                        }
-                        hand.sendEmptyMessage(msg);
                     }
-                }.start();
+                });
             }
             final Handler hand = new Handler(new Handler.Callback() {
                 @Override

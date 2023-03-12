@@ -27,6 +27,8 @@ import com.example.trackexpensesdiarydemo.dao.UserDao;
 import com.example.trackexpensesdiarydemo.databinding.FragmentHomeBinding;
 import com.example.trackexpensesdiarydemo.ui.FunctionActivity;
 import com.example.trackexpensesdiarydemo.ui.ReigisterActivity;
+import com.google.android.material.textfield.TextInputEditText;
+import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -45,6 +47,7 @@ public class HomeFragment extends Fragment {
         View root = binding.getRoot();
         HomeViewModel homeViewModel =
                 new ViewModelProvider(this).get(HomeViewModel.class);
+
         binding.ReigisterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
