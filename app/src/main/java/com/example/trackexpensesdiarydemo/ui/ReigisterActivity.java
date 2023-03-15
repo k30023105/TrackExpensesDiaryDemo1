@@ -28,47 +28,47 @@ public class ReigisterActivity extends AppCompatActivity {
         binding.OKBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Handler handler = new Handler();
-                handler.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        String[] field = new String[3];
-                        field[0] = "username";
-                        field[1] = "useremail";
-                        field[2] = "password";
-                        String[] data = new String[3];
-                        data[0] = "username";
-                        data[1] = "useremail";
-                        data[2] = "password";
-                        PutData putData = new PutData("http://projects.vishnus.com/AdvancedHttpURLConnection/putData.php","POST",field,data);
-                        if (putData.startPut()){
-                            if (putData.onComplete()){
-                                String result = putData.getResult();
+                String nickname, useremail, password, password2;
+                nickname = String.valueOf(binding.nickNameText.getText());
+                useremail = String.valueOf(binding.EmailText.getText());
+                password = String.valueOf(binding.passwordText.getText());
+                password2 = String.valueOf(binding.password2Text.getText());
+
+                if (nickname.equals("") && useremail.equals("") && password.equals("") && password2.equals("")) {
+                    Handler handler = new Handler();
+                    handler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            String[] field = new String[3];
+                            field[0] = "nickname";
+                            field[1] = "useremail";
+                            field[2] = "password";
+                            field[3] = "password2";
+                            String[] data = new String[3];
+                            data[0] = "username";
+                            data[1] = "useremail";
+                            data[2] = "password";
+                            data[3] = "password2";
+                            PutData putData = new PutData("http://localhost/LoginRegister/signup.php", "POST", field, data);
+                            if (putData.startPut()) {
+                                if (putData.onComplete()) {
+                                    String result = putData.getResult();
+                                    if (result.equals("Sign Up Success")) {
+                                        Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(getApplicationContext(), HomeFragment.class);
+                                        startActivity(intent);
+                                        finish();
+                                    } else {
+                                        Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
+                                    }
+                                }
                             }
                         }
-                    }
-                });
-            }
-            final Handler hand = new Handler(new Handler.Callback() {
-                @Override
-                public boolean handleMessage(@NonNull Message msg) {
-                    switch (msg.what){
-                        case 0:
-                            Toast.makeText(ReigisterActivity.this,"註冊失敗",Toast.LENGTH_LONG).show();
-                        case 1:
-                            Toast.makeText(ReigisterActivity.this,"已有同信箱帳號，請換一個信箱或是登入",Toast.LENGTH_LONG).show();
-                        case 2:
-                            Toast.makeText(ReigisterActivity.this,"註冊成功，即將回到登入介面",Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent();
-                            intent.putExtra("a","註冊");
-                            setResult(RESULT_CANCELED,intent);
-                            finish();
-                            Intent intent1 = new Intent(ReigisterActivity.this, HomeFragment.class);
-                            startActivity(intent1);
-                    }
-                    return false;
+                    });
+                } else {
+                    Toast.makeText(getApplicationContext(), "請完成全部欄位的填寫", Toast.LENGTH_SHORT).show();
                 }
-            });
+            }
         });
-    }
-}
+            }
+        }
